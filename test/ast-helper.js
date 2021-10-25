@@ -16,7 +16,7 @@ const items = (ca) => {
       name: t.name,
       nodeType: t.nodeType,
       stateVariable: t.stateVariable,
-      type: t.typeName.name,
+      type: t.typeName.name == undefined ? t.typeName.pathNode.name: t.typeName.name,
       mutability: t.typeName.stateMutability,
     }));
 };
